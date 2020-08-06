@@ -1,0 +1,30 @@
+form {
+    border: 1px solid #545454;
+    border-radius: 5px;
+    padding: 40px;
+    background-color: #008BF8;
+    border-color: #084C61;
+    border-width: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-color: #084C61;
+    background-color:#cce5ff ;
+    border-width: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+#submitButton{
+    background-color: #008BF8;
+    border-radius:5px;
+    border-color: #084C61;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
