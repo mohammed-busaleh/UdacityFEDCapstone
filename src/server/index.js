@@ -6,13 +6,7 @@ var cors = require('cors')
 const request = require('request');
 const dotenv = require('dotenv');
 dotenv.config();
-
-const aylien = require("aylien_textapi");
 const app = express();
-const textapi = new aylien({
-    application_id: process.env.API_ID,
-    application_key: process.env.API_KEY
-});
 const geoNamesURL="http://api.geonames.org/searchJSON?q="
 const geoUsername="mbusaleh"
 const pixaBayURL="https://pixabay.com/api/?key="
@@ -25,7 +19,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-app.use(express.static('dist'))
+app.use(express.static('dist'+ '/public'))
 
 //console.log(JSON.stringify(mockAPIResponse))
 

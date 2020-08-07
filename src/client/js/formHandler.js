@@ -29,7 +29,7 @@ async function handleSubmit(event) {
     // formatDate(start_date), "endDate==>", formatDate(end_date));
     let formText = document.getElementById('name').value
    // console.log(formText);
-    let tripLength=Math.round((departInputDate-currentDate)/ (1000 * 3600 * 24))+1;
+    let tripLength=Math.round((departInputDate-currentDate)/ (1000 * 3600 * 24));
     const pixyData=await postData('http://localhost:8090/pixySubmit', { formText });
     const geoData=await postData('http://localhost:8090/geoSubmit', { formText });
     //console.log("geoData=>>",geoData.lng);
@@ -102,21 +102,24 @@ const getWeatherData=async(lat,lan,start_date,end_date,imgURL,tripLength,departI
         img.id="resultImg";
         flightDetailsList.id="resultFlightDetails"
         weatherDetailsList.id="resultWeatherDetails"
-        img.src=imgURL;
+       img.src="src/assests/Blocks-0.5s-636px.gif"
         result.appendChild(img);
         depart.innerText="Departure Date: \n"+departInputDate+"\n";
         leave.innerText="Leave Date: \n"+leaveInputDate+"\n";
         console.log(newData);
-        temp_min.innerText="Weather Info \nLow: "+newData.data[0].min_temp+" C \n";
-        temp_max.innerText="High: "+newData.data[0].max_temp+" C ";
-        tripFromNow.innerText="Travel Info: \nThe trip will be  "+tripLength+" days from today \n";
+        temp_min.innerText="Weather Info \nLow: "+newData.data[0].min_temp+" C \n "+"High: "+newData.data[0].max_temp+" C ";;
+       // temp_max.innerText=
+        tripFromNow.innerText="Travel Info \nThe trip will be  "+tripLength+" days from today \n";
         flightDetailsList.appendChild(tripFromNow);
         flightDetailsList.appendChild(depart);
         flightDetailsList.appendChild(leave);
         weatherDetailsList.appendChild(temp_min);
-        weatherDetailsList.appendChild(temp_max);
+        //weatherDetailsList.appendChild(temp_max);
         result.appendChild(flightDetailsList);
         result.appendChild(weatherDetailsList);
+        document.getElementById("resultImg").remove();
+        img.src=imgURL;
+        result.appendChild(img);
     }catch(error){
         console.log("BitError: " + error) 
     }

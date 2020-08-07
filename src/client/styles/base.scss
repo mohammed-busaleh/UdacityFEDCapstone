@@ -21,37 +21,57 @@ ul li {
   }
 section {
     max-width: 800px;
-    min-width: 320px;
+    min-width: 280px;
     margin: 50px auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 #resultImg{
     grid-area: img;
-    
+    object-fit: contain;
 }
 #resultFlightDetails{
     grid-area: data;
     background-color:#008BF8 ;
     padding-top: 2vh;
-    border-radius:5px;
-    border-color: #084C61;
-    border-width: 3px;
+
 }
 #resultWeatherDetails{
     grid-area: weather;
     background-color:#008BF8 ;
     padding-top: 2vh;
-    border-radius:5px;
-    border-color: #084C61;
-    border-width: 3px;
+
 }
-#result{
-    display: grid;
-    grid-column-gap: 1vh;
-    grid-template-rows: auto ;
-    grid-template-columns:auto auto;
-    grid-template-areas:
-    "img data"
-    "img weather";
+@media only screen and (min-width: 934px)  {
+    #result {
+        display: grid;
+        //grid-column-gap: 1vh;
+        grid-template-rows: auto;
+        grid-template-columns:auto auto;
+        grid-template-areas:
+        "img data"
+        "img weather";
+        border-radius: 5px;
+        border: 3px solid #084C61
+    }
+}
+@media only screen and (min-width: 451px) and (max-width:933px ){
+    #result {
+        display: grid;
+        //grid-column-gap: 1vh;
+        grid-template-rows: auto;
+        grid-template-columns:auto auto;
+        grid-template-areas:
+        "weather data"
+        "img img";
+        border-radius: 5px;
+        border: 3px solid #084C61
+    }
+}
+@media only screen and (max-width: 450px){
+    #result{
+        display:flex;
+        flex-flow: column;
+        justify-content: space-around;
+    }
 }
