@@ -1,3 +1,5 @@
+import {describe, expect} from "@jest/globals";
+
 const app = require('../server/index');
 const request = require('supertest');
 describe('GET /', () => {
@@ -6,21 +8,14 @@ describe('GET /', () => {
         expect(response.statusCode).toBe(200);
     });
 });
-describe("POST to /submit", () => {
+describe("POST to /geoSubmit", () => {
     test("request passed", async () => {
         const response = await request(app)
-        .post("/submit")
+        .post("/geoSubmit")
         .send({
-            url: 'https://blog.udacity.com/2020/07/3-ways-to-advance-beyond-entry-level-react-developer.html'
+           body:'London'
         })
         expect(response.statusCode).toBe(200)
     });
-    test("Post response passed", async () => {
-        const response = await request(app)
-        .post("/submit")
-        .send({
-            url: 'https://blog.udacity.com/2020/07/3-ways-to-advance-beyond-entry-level-react-developer.html'
-        })
-        expect(response).toBeDefined
-    });
+
 })

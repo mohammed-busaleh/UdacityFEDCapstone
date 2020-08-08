@@ -42,10 +42,16 @@ section {
     padding-top: 2vh;
 
 }
+#error{
+    background-color: red;
+    font-size: 30px;
+
+}
 @media only screen and (min-width: 934px)  {
     #result {
         display: grid;
         //grid-column-gap: 1vh;
+        background-color: #008BF8;
         grid-template-rows: auto;
         grid-template-columns:auto auto;
         grid-template-areas:
