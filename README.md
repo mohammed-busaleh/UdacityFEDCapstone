@@ -26,5 +26,9 @@ There is an error handling on both backend requests and frontend level. The appl
 - checks if one of the dates does not have value .
 #### backend side(Graphical error):
 - if the city name is in correct or the APIs does not have it.
-### Sample of teh application 
+### Sample of The Application 
 
+![alttext](https://github.com/mohammed-busaleh/UdacityFEDCapstone/blob/master/ProjSample%231.jpg)
+![alttext](https://github.com/mohammed-busaleh/UdacityFEDCapstone/blob/master/ProjSample%232.jpg)
+![alttext](https://github.com/mohammed-busaleh/UdacityFEDCapstone/blob/master/ProjSample%233.jpg)
+![alttext](https://github.com/mohammed-busaleh/UdacityFEDCapstone/blob/master/ProjSample%234.jpg)
