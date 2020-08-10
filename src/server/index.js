@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-app.use(express.static('dist'+ '/public'))
+app.use(express.static('dist'))
 
 // designates what port the app will listen to for incoming requests
 app.listen(8090, function () {
@@ -70,8 +70,8 @@ app.post('/geoSubmit',sendGeoData);
 
 app.post("/pixySubmit", sendPixyData)
 
-app.get('/', function (req, res) {
-    res.sendFile('dist/index.html')
-})
+// app.get('/', function (req, res) {
+//     res.sendFile('dist/index.html')
+// })
 
 module.exports = app;

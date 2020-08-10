@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <title>Test</title>
-    <link rel="stylesheet" href="src/client/styles/resets.scss">
-    <link rel="stylesheet" href="src/client/styles/base.scss">
-    <link rel="stylesheet" href="src/client/styles/header.scss">
-    <link rel="stylesheet" href="src/client/styles/form.scss">
-    <link rel="stylesheet" href="src/client/styles/footer.scss">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 
@@ -19,17 +14,18 @@
 
 <main>
     <section>
-        <form class="" onsubmit="return Client.handleSubmit(event)">
+        <form >
             <p2>City Name</p2>
-            <input id="name" type="text" name="input" value="">
+            <input id="name" type="text" name="input" placeholder="Input city name here" required="required">
             <p2>Departure Date</p2>
-            <input id="start_date" type="date" name="date" placeholder="Enter Departure Date" >
+            <input id="start_date" type="date" name="date" placeholder="Enter Departure Date" required="required" >
             <p2>Leave Date</p2>
-            <input id="end_date" type="date" name="date" placeholder="Enter Leave Date" >
+            <input id="end_date" type="date" name="date" placeholder="Enter Leave Date" required="required">
             
             <!-- <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)"> -->
         </form>
-        <input id="submitButton"type="Submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+<!--        onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)"-->
+        <input id="submitButton"type="Submit"  value="Submit" >
     <h1 id="error"><h1>
         <section >
 
