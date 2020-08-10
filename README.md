@@ -10,8 +10,9 @@ I tried to make this app as manimal as possible. I used the Project#4 as a start
 2. open command line .
 3. go to project directory after unzipping it .
 4. ```npm install``` .
-5. ```npm run build-dev``` .
-6. in a seprated terminal run npm start .
+5. ```npm run build-prod```
+6. ```npm run build-dev``` .
+7. in a seprated terminal run npm start .
 
 ## APIs Used
 
